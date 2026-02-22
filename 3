@@ -1,0 +1,20 @@
+# Valores de x entre -10 y 10
+x = np.linspace(-10,10,100)
+
+# Funcion cuadrática
+y = x**2
+
+# Crear gráfica
+plt.figure()
+
+plt.plot(x,y, label='y=x^2')
+
+plt.title("Funcion cuadratica")
+plt.xlabel("x")
+plt.ylabel("y")
+
+plt.grid(True)
+
+plt.legend()
+
+plt.show()
