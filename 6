@@ -1,0 +1,31 @@
+import pandas as pd
+
+datos = {
+    "pixel_1": [120, 130, 125],
+    "pixel_2" : [60, 65, 70],
+    "clase": [0,1,0]
+
+}
+df= pd.DataFrame(datos)
+print (df)
+print (df.shape)
+
+#filtrar solo clase 1
+
+df_clase_1 = df[df["clase"] == 1]
+
+#seleccionar columnas especificas
+pixeles = df.loc[:, ["pixel_1", "pixel_2"]]
+print(df_clase_1)
+print(pixeles)
+
+#normalizacion simple
+pixeles = df[["pixel_1", "pixel_2"]]
+pixeles_norm = pixeles / 255.0
+
+#media por columna
+media = pixeles.mean()
+
+print(pixeles_norm)
+print (media)
+
