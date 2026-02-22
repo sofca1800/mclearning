@@ -1,0 +1,41 @@
+# importamos la libreria NumPy 
+
+import numpy as np
+
+# creamos un arreglo unidimensional 
+vector = np.array([1,2,3,4,5])
+
+# creamos un arreglo bidimensional 
+matriz = np.array([[1,2,3],[4,5,6]])
+
+# ndim nos dice el numero de dimensiones del arreglo
+# shape nos dice la forma (filas, columnas)
+print(vector.ndim, vector.shape)
+print(matriz.ndim, matriz.shape)
+
+# creamos dos matrices 2x2
+A = np.array([[1,2], [3,4]])
+B = np.array([[5,6], [7,8]])
+
+# suma de matrices
+C = A + B
+
+# calcula la raiz cuadrada
+D = np.sqrt(A)
+
+# mostramos las matrices originales
+print(A)
+print(B)
+
+# generamos una matriz de 5x5 con valores aleatorios entre 0 y 254
+imagen = np.random.randint(0, 255, (5, 5))
+
+roi = imagen[1:4, 1:4]
+
+imagen_norm = imagen / 255.0
+
+# mostramos la region central
+print(roi)
+
+# mostramos la imagen normalizada
+print(imagen_norm)
