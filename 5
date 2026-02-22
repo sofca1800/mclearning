@@ -1,0 +1,14 @@
+# Crear una imagen simulada de 5x5 con valores entre 0 y 255
+imagen = np.random.randint(0,256,(5,5))
+
+# ROI (Region of Interest)
+# Selecciona una submatriz desde fila 1 a 3 y columna 1 a 3
+roi = imagen[1:4,1:4]
+
+# Normalizar la imagen dividiendo entre 255
+# Convierte valores de 0-255 a rango 0-1
+imagen_norm = imagen/255
+
+# Mostrar resultados
+print(roi)
+print(imagen_norm)
