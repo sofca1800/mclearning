@@ -1,0 +1,67 @@
+# importamos las librerias necesarias
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+# generamos 100 valores entre 0 y 2*pi
+x = np.linspace(0, 2*np.pi, 100)
+
+# creamos una figura con tamaño personalizado
+plt.figure(figsize=(8,4))
+
+# primera grafica funcion seno
+plt.subplot(1, 2, 1)
+plt.plot(x, np.sin(x))
+plt.title("funcion seno")
+
+# segunda grafica funcion coseno
+plt.subplot(1, 2, 2)
+plt.plot(x, np.cos(x))
+plt.title("funcion coseno")
+
+
+# funcion cuadratica
+
+
+# generamos valores entre -10 y 10
+x = np.linspace(-10, 10, 100)
+
+# calculamos y = x^2
+y = x**2
+
+# nueva figura
+plt.figure()
+
+# graficamos la funcion cuadratica
+plt.plot(x, y, label="y = x^2")
+
+plt.title("funcion cuadratica")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
+# crecimiento exponencial
+
+
+# generamos valores entre 0 y 5
+x = np.linspace(0, 5, 50)
+
+# calculamos la funcion exponencial e^x
+y = np.exp(x)
+
+# nueva figura
+plt.figure()
+plt.plot(x, y)
+
+plt.title("crecimiento exponencial")
+plt.xlabel("x")
+plt.ylabel("e^x")
+
+# guardamos la grafica como imagen png
+plt.savefig("grafica_exponencial.png", dpi=300)
+
+# mostramos la grafica
+plt.show()
